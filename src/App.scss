@@ -1,0 +1,57 @@
+@import "node_modules/vanilla-framework/scss/vanilla";
+
+@include vanilla;
+
+.container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 75rem;
+  padding: 3rem;
+  margin: 0 auto;
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.p-card {
+  &--highlighted {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: solid #b897b2;
+  }
+  &__title {
+    padding-bottom: 1rem;
+    border-bottom: dotted #e3e3e3 1px;
+    font-weight: 300;
+  }
+  &__content {
+    padding-bottom: 1rem;
+    font-style: italic;
+  }
+}
+
+.p-image--shadowed {
+  height: 10.93rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.p-heading {
+  &--4 {
+    font-weight: 500;
+    color: #4c90ae;
+  }
+  &--5 {
+    margin: 0;
+    /* using !important here to override the 1.9rem padding-top from normalize */
+    padding-top: 1rem !important;
+    border-top: dotted #e3e3e3 1px;
+    font-weight: 300;
+  }
+}
+
+.author-link {
+  color: #4c90ae;
+}
